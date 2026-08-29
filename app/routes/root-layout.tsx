@@ -5,6 +5,7 @@ import { BaseError } from "~/lib/error"
 import { repositoryMiddleware } from "~/middlewares/repositories"
 import { commitSession, getSession } from "~/sessions/sessions"
 import type { Route } from "./+types/root-layout"
+import { useEffect } from "react"
 
 export const middleware: Route.MiddlewareFunction[] = [repositoryMiddleware]
 
@@ -22,6 +23,12 @@ export default function RootLayout({ loaderData }: Route.ComponentProps) {
 		// 副作用
 		showToast(loaderData.toastPayload)
 	}
+
+	useEffect(() => {
+	if(loaderData.toastPayload){
+		showToast(loaderData.toastPayload)
+	}
+},[loaderData.toastPayload]);
 
 	return (
 		<>
