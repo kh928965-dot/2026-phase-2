@@ -11,15 +11,16 @@ export default function TopPage() {
 	}, [])
 
 	return (
-		<div
-		className="flex flex-col items-center text-center"
-		>
+		<div className="flex flex-col items-center text-center">
 			<h1>トップページ</h1>
-			<Button variant="brand" size="xl" className="rounded-2xl w-[200px] h-[100px]" asChild>
-				<Link to="/app/live/create">
-						ログイン
-				</Link>
-				</Button>
+			<Button
+				variant="brand"
+				size="xl"
+				className="rounded-2xl w-[200px] h-[100px]"
+				asChild
+			>
+				<Link to="/app/live/create">ログイン</Link>
+			</Button>
 			<div>{message}</div>
 		</div>
 	)
