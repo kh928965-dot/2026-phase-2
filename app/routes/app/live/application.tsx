@@ -267,7 +267,6 @@ export default function LiveApplicationPage({
 	loaderData: { availableApplicationsWithUrl, suspendedApplicationsWithUrl },
 }: Route.ComponentProps) {
 	return (
-		//タイトル部分
 		<div className="space-y-6">
 			<div className="space-y-1">
 				<h1 className="text-2xl font-semibold">バンドの募集</h1>
